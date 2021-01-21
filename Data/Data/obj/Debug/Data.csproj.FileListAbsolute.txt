@@ -1,0 +1,14 @@
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\bin\Debug\Data.dll.config
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\bin\Debug\Data.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\bin\Debug\Data.pdb
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\bin\Debug\Entity.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\bin\Debug\EntityFramework.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\bin\Debug\Entity.pdb
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\bin\Debug\EntityFramework.xml
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\obj\Debug\Data.csprojAssemblyReference.cache
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\obj\Debug\Data.csproj.CopyComplete
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\obj\Debug\Data.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Data\Data\obj\Debug\Data.pdb

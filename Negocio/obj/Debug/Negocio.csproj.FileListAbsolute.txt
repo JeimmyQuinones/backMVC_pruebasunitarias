@@ -1,0 +1,14 @@
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\bin\Debug\Negocio.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\bin\Debug\Negocio.pdb
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\bin\Debug\Data.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\bin\Debug\Entity.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\bin\Debug\EntityFramework.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\bin\Debug\Data.pdb
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\bin\Debug\Data.dll.config
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\bin\Debug\Entity.pdb
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\bin\Debug\EntityFramework.xml
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\obj\Debug\Negocio.dll
+D:\Programas\Programa_aps.net\MVC_CodeFirst\Negocio\obj\Debug\Negocio.pdb
