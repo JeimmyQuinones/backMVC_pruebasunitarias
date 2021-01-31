@@ -20,6 +20,14 @@ namespace Data
             AplicactionDbContext db = new AplicactionDbContext();
             return db.Proceso.FirstOrDefault(x => x.Idporceso == id);
         }
+        public List<Proceso> GetProcesosbynombreusuario(string nombreusuario)
+        {
+            AplicactionDbContext db = new AplicactionDbContext();
+            return (from p in db.Proceso
+                    join q in db.Usuario on p.IdUsuario equals q.IdUsuario
+                    where q.Nombre == nombreusuario
+                    select p).ToList(); ;
+        }
         public string AddProceso(Proceso model)
         {
             AplicactionDbContext db = new AplicactionDbContext();
@@ -38,7 +46,7 @@ namespace Data
         public string SaveProceso(Proceso proces)
         {
             AplicactionDbContext db = new AplicactionDbContext();
-            var model = db.Proceso.FirstOrDefault(x => x.IdUsuario == proces.IdUsuario);
+            var model = db.Proceso.FirstOrDefault(x => x.Idporceso == proces.Idporceso);
             if (model != null)
             {
                 try
@@ -96,6 +104,11 @@ namespace Data
         {
             AplicactionDbContext db = new AplicactionDbContext();
             return db.Usuario.FirstOrDefault(x => x.IdUsuario == id);
+        }
+        public List<Usuario> GetUsuariobyApellido(string apellido)
+        {
+            AplicactionDbContext db = new AplicactionDbContext();
+            return db.Usuario.Where(x => x.Apellido == apellido).ToList();
         }
         public string AddUsuario(Usuario user)
         {

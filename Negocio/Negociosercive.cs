@@ -16,10 +16,16 @@ namespace Negocio
             ServiceData data = new ServiceData();
             return data.GetProcesos();
         }
+      
         public static Proceso GetProceso(int id)
         {
             ServiceData data = new ServiceData();
             return data.GetProceso(id);
+        }
+        public static List<Proceso> GetProcesosbynombreusuario(string nombreusuario)
+        {
+            ServiceData data = new ServiceData();
+            return data.GetProcesosbynombreusuario(nombreusuario);
         }
         public static string AddProceso(Proceso model)
         {
@@ -44,6 +50,11 @@ namespace Negocio
         {
             ServiceData data = new ServiceData();
             return data.GetUsuarios();
+        }
+        public static List<Usuario> GetUsuariobyApellido(string Apellido)
+        {
+            ServiceData data = new ServiceData();
+            return data.GetUsuariobyApellido(Apellido);
         }
         public static Usuario GetUsuario(int id)
         {

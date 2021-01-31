@@ -13,13 +13,26 @@ namespace WebApplication.Controllers
     public class UsuarioController : Controller
     {
         // GET: Usuario
-        public ActionResult Index()
+        public ActionResult Index(string Nombre_Usuario)
         {
-            List<Usuario> modellist = Negocioservice.GetUsuarios();
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<Usuario, UsuarioViewModel>());
-            var mapper = config.CreateMapper();
-            var lstVm = modellist.Select(itm => mapper.Map<UsuarioViewModel>(itm)).ToList();
-            return View(lstVm);
+            if(!String.IsNullOrEmpty(Nombre_Usuario))
+            {
+         
+                List<Usuario> modellist = Negocioservice.GetUsuariobyApellido(Nombre_Usuario);
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<Usuario, UsuarioViewModel>());
+                var mapper = config.CreateMapper();
+                var lstVm = modellist.Select(itm => mapper.Map<UsuarioViewModel>(itm)).ToList();
+                return View(lstVm);
+            }
+            else
+            {
+                List<Usuario> modellist = Negocioservice.GetUsuarios();
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<Usuario, UsuarioViewModel>());
+                var mapper = config.CreateMapper();
+                var lstVm = modellist.Select(itm => mapper.Map<UsuarioViewModel>(itm)).ToList();
+                return View(lstVm);
+            }
+            
         }
         // GET: Usuario/Edit/5
         public ActionResult Edit(int id)

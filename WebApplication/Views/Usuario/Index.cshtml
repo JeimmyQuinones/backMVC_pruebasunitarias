@@ -34,52 +34,68 @@
 
 <h2>Usuarios</h2>
 <hr />
-<button type="button" class="btn btn-info" onclick="modalreditar(-1)"> Agregar</button>
 
-<table class="table tablecolor">
-    <thead class="table-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
-            <th scope="col">Correo</th>
-            <th scope="col">Cedula</th>
-            <th scope="col"></th>
-        </tr>
-    </thead>
 
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <th scope="row">1</th>
-                <td> @Html.DisplayFor(modelItem => item.Nombre)</td>
-                <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
-                <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                <td>@Html.DisplayFor(modelItem => item.Cedula)</td>
-                <td>
-                    <button type="button" class="btn btn-warning" onclick="modalreditar(@item.IdUsuario)"> Editar</button>
-                    <button type="button" class="btn btn-danger" onclick="modalreliminar(@item.IdUsuario)"> Eliminar</button>
-                </td>
+@using (Html.BeginForm("Index","Usuario",FormMethod.Get))
+{
+    <div class="form-horizontal colo-from">
+        <div class="form-group">
+            <p> Busqueda por Nombre: @Html.TextBox("Nombre_Usuario")</p>
+          
+            <input type="submit" value="Buscar" class="btn btn-success" />
+        </div>
+    </div>
+}
+<br />
+        <button type="button" class="btn btn-info" onclick="modalreditar(-1)"> Agregar</button>
 
-            </tr>
-        }
-    </tbody>
-</table>
+        <table class="table tablecolor">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Cedula</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
 
-<div id="modaleliminar" class="modal" tabindex="-1">
-    <input type="hidden" id="modaleliminarvalue" />
-    <div class="modal-dialog">
-        <div class="modal-content colorany">
-            <div class="text-center">
-                <div class="modal-body">
-                    <input type="hidden" id="modaleliminarvalor" />
-                    <i class="fas fa-exclamation-triangle" style="color: orange; font-size: 400%;"></i>
-                    <h3>Esta seguro de Eliminar</h3>
-                    <button type="button" class="btn btn-secondary" onclick="cerrareliminar()">Cancelar</button>
-                    <button type="button" class="btn btn-danger" onclick="Eliminar()">Eliminar</button>
+            <tbody>
+                @{int i = 1;}
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <th scope="row">@i</th>
+                    @{i++;
+                    }
+                    <td> @Html.DisplayFor(modelItem => item.Nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cedula)</td>
+                    <td>
+                        <button type="button" class="btn btn-warning" onclick="modalreditar(@item.IdUsuario)"> Editar</button>
+                        <button type="button" class="btn btn-danger" onclick="modalreliminar(@item.IdUsuario)"> Eliminar</button>
+                    </td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+
+        <div id="modaleliminar" class="modal" tabindex="-1">
+            <input type="hidden" id="modaleliminarvalue" />
+            <div class="modal-dialog">
+                <div class="modal-content colorany">
+                    <div class="text-center">
+                        <div class="modal-body">
+                            <input type="hidden" id="modaleliminarvalor" />
+                            <i class="fas fa-exclamation-triangle" style="color: orange; font-size: 400%;"></i>
+                            <h3>Esta seguro de Eliminar</h3>
+                            <button type="button" class="btn btn-secondary" onclick="cerrareliminar()">Cancelar</button>
+                            <button type="button" class="btn btn-danger" onclick="Eliminar()">Eliminar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
